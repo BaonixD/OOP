@@ -8,9 +8,9 @@ public class task6 {
         String input = scanner.next();
 
         if (isPalindrome(input)) {
-            System.out.println("It is a Palindrome.");
+            System.out.println("It is a Palindrome");
         } else {
-            System.out.println("It is NOT a Palindrome.");
+            System.out.println("It is not a Palindrome");
         }
     }
 

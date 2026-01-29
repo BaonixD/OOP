@@ -20,7 +20,7 @@ public class task3 {
         else if (grade >= 55) System.out.println("Grade: D+");
         else if (grade >= 50) System.out.println("Grade: D");
         else if (grade >= 0)  System.out.println("Grade: F");
-        else System.out.println("Error: Invalid score.");
+        else System.out.println("Error: Invalid score");
 
     }
 

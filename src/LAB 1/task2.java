@@ -9,9 +9,16 @@ public class task2 {
         System.out.println( "San engiz: " );
         double x = input.nextDouble();
 
+
         double area = x * x;
         double perimetr = x * 4;
         double diagonal = x * Math.sqrt(x);
+
+        if ( Double.isInfinite(area) ) {
+            System.out.println("шексыз");
+        } else{
+            System.out.println(area);
+        }
 
         System.out.println("Area: " + area);
         System.out.println("Perimeter: " + perimetr);
