@@ -1,14 +1,16 @@
 public class time {
+
     private int hour;
     private int minute;
     private int second;
 
-
+    // class
     public time(int hour, int minute, int second) {
         setTime(hour, minute, second);
     }
 
 
+    // setter
     public void setTime(int hour, int minute, int second) {
         this.hour = (hour >= 0 && hour < 24) ? hour : 0;
         this.minute = (minute >= 0 && minute < 60) ? minute : 0;
@@ -60,7 +62,7 @@ public class time {
 
 
     public static void main(String[] args) {
-        time t = new time(23, 23, 23);
+        time t = new time(24, 23, 23);
         System.out.println(t.toUniversal());
         System.out.println(t.toStandard());
 

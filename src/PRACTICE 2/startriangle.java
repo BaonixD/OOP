@@ -20,7 +20,7 @@ public class startriangle {
     }
 
     public static void main(String[] args) {
-        startriangle small = new startriangle(7);
+        startriangle small = new startriangle(5);
         System.out.println(small.toString());
     }
 }
