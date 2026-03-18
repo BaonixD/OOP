@@ -1,4 +1,6 @@
 package PRACTICE4;
+import java.util.*;
+
 
 public class Person {
     String name;
@@ -12,7 +14,9 @@ public class Person {
     }
 }
 
-class Student extends Person implements CanHavePizza, Movable, CanHaveParty, CanHaveRetake {
+
+// Добавляем implements Comparable<Student>, чтобы разрешить сравнение объектов
+class Student extends Person implements CanHavePizza, Movable, CanHaveParty, CanHaveRetake, Comparable<Student> {
     double gpa;
 
     public Student(String name, double gpa) {
@@ -20,19 +24,42 @@ class Student extends Person implements CanHavePizza, Movable, CanHaveParty, Can
         this.gpa = gpa;
     }
 
+    // Реализация метода интерфейса Comparable
+    // Этот метод и есть "встроенный" компаратор
     @Override
-    public void eatPizza() {
-        System.out.println(name + " (Student) is eating pizza."); // [cite: 15]
+    public int compareTo(Student other) {
+        // Логика из методички (стр. 9):
+        // Если наш GPA больше — возвращаем 1
+        // Если меньше — возвращаем -1
+        // Если равны — 0
+        if (this.gpa > other.gpa) return 1;
+        if (this.gpa < other.gpa) return -1;
+        return 0;
     }
 
     @Override
-    public void move() { System.out.println(name + " is moving."); } // [cite: 37]
+    public void eatPizza() {
+        System.out.println(name + " (Student) is eating pizza.");
+    }
 
     @Override
-    public void dance() { System.out.println(name + " is dancing."); }
+    public void move() {
+        System.out.println(name + " is moving.");
+    }
+
+    @Override
+    public void dance() {
+        System.out.println(name + " is dancing.");
+    }
 
     @Override
     public void reviewMaterial() {
         System.out.println(name + " is preparing for a retake.");
+    }
+
+    // Полезно добавить toString, чтобы при выводе в консоль видеть данные, а не адрес в памяти
+    @Override
+    public String toString() {
+        return "Student{name='" + name + "', gpa=" + gpa + "}";
     }
 }
