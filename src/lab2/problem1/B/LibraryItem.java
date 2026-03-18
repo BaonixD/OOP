@@ -11,7 +11,7 @@ public abstract class LibraryItem {
         this.publicationYear = year;
     }
 
-    // Геттеры (Getters)
+    // Getters
     public String getTitle() {
         return title;
     }
@@ -24,7 +24,7 @@ public abstract class LibraryItem {
         return publicationYear;
     }
 
-    // Сеттеры (Setters)
+    // Setters
     public void setTitle(String title) {
         this.title = title;
     }

@@ -8,7 +8,7 @@ public class Device {
         this.brand = brand;
     }
 
-    // Переопределяем equals: теперь объекты равны, если у них одинаковый бренд
+    // Переопределяем equals
     @Override
     public boolean equals(Object o) {
         if (this == o) return true; // Если это один и тот же адрес в памяти
@@ -17,7 +17,7 @@ public class Device {
         return Objects.equals(brand, device.brand); // Сравниваем само значение строки
     }
 
-    // Переопределяем hashCode: генерируем число на основе бренда
+    // Переопределяем hashCode
     @Override
     public int hashCode() {
         return Objects.hash(brand);

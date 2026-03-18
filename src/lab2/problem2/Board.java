@@ -38,7 +38,6 @@ public class Board {
     public boolean movePiece(Position from, Position to) {
         Piece p = grid[from.getRow() - 1][from.getColumn() - 'a'];
         if (p != null && p.isLegalMove(to)) {
-            // В базовой версии просто перемещаем
             grid[to.getRow() - 1][to.getColumn() - 'a'] = p;
             grid[from.getRow() - 1][from.getColumn() - 'a'] = null;
             p.a = to;
