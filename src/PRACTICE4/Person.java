@@ -12,7 +12,6 @@ public class Person {
     }
 }
 
-// Студент — это человек (Inheritance is-a) [cite: 31, 45]
 class Student extends Person implements CanHavePizza, Movable, CanHaveParty, CanHaveRetake {
     double gpa;
 
