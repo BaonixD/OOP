@@ -15,7 +15,6 @@ public class Person {
 }
 
 
-// Добавляем implements Comparable<Student>, чтобы разрешить сравнение объектов
 class Student extends Person implements CanHavePizza, Movable, CanHaveParty, CanHaveRetake, Comparable<Student> {
     double gpa;
 
@@ -24,14 +23,9 @@ class Student extends Person implements CanHavePizza, Movable, CanHaveParty, Can
         this.gpa = gpa;
     }
 
-    // Реализация метода интерфейса Comparable
-    // Этот метод и есть "встроенный" компаратор
+
     @Override
     public int compareTo(Student other) {
-        // Логика из методички (стр. 9):
-        // Если наш GPA больше — возвращаем 1
-        // Если меньше — возвращаем -1
-        // Если равны — 0
         if (this.gpa > other.gpa) return 1;
         if (this.gpa < other.gpa) return -1;
         return 0;
