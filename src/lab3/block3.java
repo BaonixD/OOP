@@ -16,7 +16,7 @@ interface MyCollection<E> extends Iterable<E> {
 
 // Простая реализация для примера (опционально)
 class MyArrayList<E> implements MyCollection<E> {
-    private Object[] elements = new Object[10];
+    private final Object[] elements = new Object[10];
     private int size = 0;
 
     public int size() { return size; }

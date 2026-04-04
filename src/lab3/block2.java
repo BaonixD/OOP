@@ -57,8 +57,8 @@ class Employee extends Person implements Comparable<Employee>, Cloneable {
 }
 
 class Manager extends Employee {
-    private Vector<Employee> team = new Vector<>();
-    private double bonus;
+    private final Vector<Employee> team = new Vector<>();
+    private final double bonus;
 
     public Manager(String name, double salary, Date hireDate, String insNum, double bonus) {
         super(name, salary, hireDate, insNum);
